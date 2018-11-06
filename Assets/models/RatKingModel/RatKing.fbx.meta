@@ -6,9 +6,97 @@ ModelImporter:
     100000: pCube12
     100002: pCube9
     100004: //RootNode
+    100006: BugClavicle
+    100008: BugFlank
+    100010: BugHead
+    100012: BugMiddle
+    100014: BugMouth
+    100016: BugNeck
+    100018: BugTorso
+    100020: Clavicle
+    100022: Head
+    100024: Jaw
+    100026: joint1
+    100028: L_Arm
+    100030: L_BugArm1
+    100032: L_BugArm2
+    100034: L_BugArm3
+    100036: L_BugElbow1
+    100038: L_BugElbow2
+    100040: L_BugElbow3
+    100042: L_BugWrist1
+    100044: L_BugWrist2
+    100046: L_BugWrist3
+    100048: L_Elbow
+    100050: L_Foot
+    100052: L_Knee
+    100054: L_Leg
+    100056: L_Thigh
+    100058: Mouth
+    100060: Neck
+    100062: R_Arm
+    100064: R_BugArm1
+    100066: R_BugArm2
+    100068: R_BugArm3
+    100070: R_BugElbow1
+    100072: R_BugElbow2
+    100074: R_BugElbow3
+    100076: R_BugWrist1
+    100078: R_BugWrist2
+    100080: R_BugWrist3
+    100082: R_Elbow
+    100084: R_Foot
+    100086: R_Knee
+    100088: R_Leg
+    100090: R_Thigh
+    100092: Snout
     400000: pCube12
     400002: pCube9
     400004: //RootNode
+    400006: BugClavicle
+    400008: BugFlank
+    400010: BugHead
+    400012: BugMiddle
+    400014: BugMouth
+    400016: BugNeck
+    400018: BugTorso
+    400020: Clavicle
+    400022: Head
+    400024: Jaw
+    400026: joint1
+    400028: L_Arm
+    400030: L_BugArm1
+    400032: L_BugArm2
+    400034: L_BugArm3
+    400036: L_BugElbow1
+    400038: L_BugElbow2
+    400040: L_BugElbow3
+    400042: L_BugWrist1
+    400044: L_BugWrist2
+    400046: L_BugWrist3
+    400048: L_Elbow
+    400050: L_Foot
+    400052: L_Knee
+    400054: L_Leg
+    400056: L_Thigh
+    400058: Mouth
+    400060: Neck
+    400062: R_Arm
+    400064: R_BugArm1
+    400066: R_BugArm2
+    400068: R_BugArm3
+    400070: R_BugElbow1
+    400072: R_BugElbow2
+    400074: R_BugElbow3
+    400076: R_BugWrist1
+    400078: R_BugWrist2
+    400080: R_BugWrist3
+    400082: R_Elbow
+    400084: R_Foot
+    400086: R_Knee
+    400088: R_Leg
+    400090: R_Thigh
+    400092: Snout
     2100000: lambert1
     2100002: lambert4
     2300000: pCube12

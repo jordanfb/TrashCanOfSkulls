@@ -69,6 +69,7 @@ ModelImporter:
     100126: transform42
     100128: transform43
     100130: transform44
+    100132: Lantern:polySurface1 1
     400000: //RootNode
     400002: Clavicle
     400004: L_Elbow
@@ -135,12 +136,16 @@ ModelImporter:
     400126: transform42
     400128: transform43
     400130: transform44
+    400132: Lantern:polySurface1 1
     2100000: lambert1
     2300000: //RootNode
     2300002: pSphere6
+    2300004: Lantern:polySurface1
     3300000: //RootNode
     3300002: pSphere6
+    3300004: Lantern:polySurface1
     4300000: pSphere6
+    4300002: Lantern:polySurface1
   externalObjects: {}
   materials:
     importMaterials: 1

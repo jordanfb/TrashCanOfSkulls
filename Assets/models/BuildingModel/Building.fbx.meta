@@ -19,6 +19,22 @@ ModelImporter:
     100026: transform5
     100028: transform6
     100030: transform7
+    100032: polySurface1
+    100034: polySurface2
+    100036: polySurface3
+    100038: polySurface4
+    100040: polySurface5
+    100042: polySurface6
+    100044: polySurface7
+    100046: polySurface7 1
+    100048: transform10
+    100050: transform11
+    100052: transform12
+    100054: transform13
+    100056: transform14
+    100058: transform15
+    100060: transform8
+    100062: transform9
     400000: //RootNode
     400002: pCube10
     400004: pCube11
@@ -35,10 +51,29 @@ ModelImporter:
     400026: transform5
     400028: transform6
     400030: transform7
+    400032: polySurface1
+    400034: polySurface2
+    400036: polySurface3
+    400038: polySurface4
+    400040: polySurface5
+    400042: polySurface6
+    400044: polySurface7
+    400046: polySurface7 1
+    400048: transform10
+    400050: transform11
+    400052: transform12
+    400054: transform13
+    400056: transform14
+    400058: transform15
+    400060: transform8
+    400062: transform9
     2100000: lambert1
     2300000: pCube16
+    2300002: polySurface7
     3300000: pCube16
+    3300002: polySurface7
     4300000: pCube16
+    4300002: polySurface7
   externalObjects: {}
   materials:
     importMaterials: 1

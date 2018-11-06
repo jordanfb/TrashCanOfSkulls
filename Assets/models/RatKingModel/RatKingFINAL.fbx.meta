@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: 0d1f1c68f853c1d409847fdc0b9b473f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BugClavicle
+    100002: BugFlank
+    100004: BugHead
+    100006: BugMiddle
+    100008: BugMouth
+    100010: BugNeck
+    100012: BugTorso
+    100014: Clavicle
+    100016: Head
+    100018: Jaw
+    100020: joint1
+    100022: L_Arm
+    100024: L_BugArm1
+    100026: L_BugArm2
+    100028: L_BugArm3
+    100030: L_BugElbow1
+    100032: L_BugElbow2
+    100034: L_BugElbow3
+    100036: L_BugHand1
+    100038: L_BugHand2
+    100040: L_BugHand3
+    100042: L_BugWrist1
+    100044: L_BugWrist2
+    100046: L_BugWrist3
+    100048: L_Elbow
+    100050: L_Foot
+    100052: L_Hand
+    100054: L_Knee
+    100056: L_Leg
+    100058: L_Thigh
+    100060: Lip
+    100062: Mouth
+    100064: Neck
+    100066: R_Arm
+    100068: R_BugArm1
+    100070: R_BugArm2
+    100072: R_BugArm3
+    100074: R_BugElbow1
+    100076: R_BugElbow2
+    100078: R_BugElbow3
+    100080: R_BugHand1
+    100082: R_BugHand2
+    100084: R_BugHand3
+    100086: R_BugWrist1
+    100088: R_BugWrist2
+    100090: R_BugWrist3
+    100092: R_Elbow
+    100094: R_Foot
+    100096: R_Hand
+    100098: R_Knee
+    100100: R_Leg
+    100102: R_Thigh
+    100104: //RootNode
+    100106: Snout
+    400000: BugClavicle
+    400002: BugFlank
+    400004: BugHead
+    400006: BugMiddle
+    400008: BugMouth
+    400010: BugNeck
+    400012: BugTorso
+    400014: Clavicle
+    400016: Head
+    400018: Jaw
+    400020: joint1
+    400022: L_Arm
+    400024: L_BugArm1
+    400026: L_BugArm2
+    400028: L_BugArm3
+    400030: L_BugElbow1
+    400032: L_BugElbow2
+    400034: L_BugElbow3
+    400036: L_BugHand1
+    400038: L_BugHand2
+    400040: L_BugHand3
+    400042: L_BugWrist1
+    400044: L_BugWrist2
+    400046: L_BugWrist3
+    400048: L_Elbow
+    400050: L_Foot
+    400052: L_Hand
+    400054: L_Knee
+    400056: L_Leg
+    400058: L_Thigh
+    400060: Lip
+    400062: Mouth
+    400064: Neck
+    400066: R_Arm
+    400068: R_BugArm1
+    400070: R_BugArm2
+    400072: R_BugArm3
+    400074: R_BugElbow1
+    400076: R_BugElbow2
+    400078: R_BugElbow3
+    400080: R_BugHand1
+    400082: R_BugHand2
+    400084: R_BugHand3
+    400086: R_BugWrist1
+    400088: R_BugWrist2
+    400090: R_BugWrist3
+    400092: R_Elbow
+    400094: R_Foot
+    400096: R_Hand
+    400098: R_Knee
+    400100: R_Leg
+    400102: R_Thigh
+    400104: //RootNode
+    400106: Snout
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

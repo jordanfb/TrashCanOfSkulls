@@ -30,6 +30,9 @@ public class Memu : MonoBehaviour {
         if (button.name == "Back") {
             SceneManager.LoadScene("MainMenu");
         }
+        if (button.name == "Menu") {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
 }

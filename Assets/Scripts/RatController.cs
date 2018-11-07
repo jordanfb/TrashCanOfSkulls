@@ -41,6 +41,12 @@ public class RatController : MonoBehaviour {
     [SerializeField]
     private NavMeshAgent navMeshAgent;
 
+    public AudioClip[] screams;
+    public AudioClip running;
+    public AudioClip walking;
+    public AudioSource movements;
+    public AudioSource vocals;
+
     public bool ChasingPlayer
     {
         get
@@ -183,6 +189,12 @@ public class RatController : MonoBehaviour {
     public void StartChasingPlayer()
     {
         chasingPlayer = true;
+        int myRand = Random.Range(0, 6);
+        vocals.clip = screams[myRand];
+        vocals.loop = false;
+        vocals.Play();
+        movements.clip = running;
+        movements.Play();
         if (patrolScript)
         {
             patrolScript.StopPatrolling();
@@ -193,6 +205,8 @@ public class RatController : MonoBehaviour {
     {
         // if stuck do one final attack probably, if not stuck then just give up I guess! This would also be if you "scared away" your prey I imagine
         chasingPlayer = false;
+        movements.clip = walking;
+        movements.Play();
         if (patrolScript)
         {
             patrolScript.StartPatrolling();

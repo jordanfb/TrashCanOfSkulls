@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43739775, g: 0.48519439, b: 0.5654665, a: 1}
+  m_IndirectSpecularColor: {r: 0.43739748, g: 0.4851939, b: 0.5654656, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -388,7 +388,7 @@ TextMesh:
   m_FontSize: 56
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 68d3adb9eea591541807cd27df0d6796, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
@@ -407,7 +407,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 68d3adb9eea591541807cd27df0d6796, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -480,7 +480,7 @@ TextMesh:
   m_FontSize: 56
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 12800000, guid: 68d3adb9eea591541807cd27df0d6796, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4290427647
@@ -499,7 +499,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 68d3adb9eea591541807cd27df0d6796, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

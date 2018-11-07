@@ -70,8 +70,10 @@ ModelImporter:
     2100000: lambert1
     2300000: pCube16
     2300002: polySurface7
+    2300004: //RootNode
     3300000: pCube16
     3300002: polySurface7
+    3300004: //RootNode
     4300000: pCube16
     4300002: polySurface7
   externalObjects: {}

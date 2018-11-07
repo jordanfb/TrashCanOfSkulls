@@ -43,11 +43,25 @@ public class pickUp : MonoBehaviour {
                 txt.text = "Press LMB to close";
             }
         }
+        else if (other.tag == "Skull")
+        {
+            txt.text = "Press E to pick up";
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Destroy(other.gameObject);
+                //increment counter here
+                txt.text = "";
+            }
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag == "Notebook")
+        {
+            txt.text = "";
+        }
+        else if (other.tag == "Skull")
         {
             txt.text = "";
         }

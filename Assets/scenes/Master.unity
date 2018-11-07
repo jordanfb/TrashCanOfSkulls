@@ -943,6 +943,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &144486286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e,
+    type: 3}
+  m_PrefabInternal: {fileID: 671652994}
+--- !u!65 &144486289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144486286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 8, z: 7}
+  m_Center: {x: -0.000015258789, y: -0.09557778, z: -0.0021246073}
 --- !u!1 &163674294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,6 +3868,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 41973f18cb25e1b4bbe965658777dccc, type: 2}
+    - target: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
+      propertyPath: m_TagString
+      value: Skull
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
   m_IsPrefabAsset: 0
@@ -4310,6 +4331,23 @@ Transform:
   m_Father: {fileID: 940401547}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &788821546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e,
+    type: 3}
+  m_PrefabInternal: {fileID: 1128919607}
+--- !u!65 &788821549
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788821546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 8, z: 7}
+  m_Center: {x: -6.9541985e-13, y: -0.09557778, z: -0.002124608}
 --- !u!1 &819855553 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1335041384937184, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0,
@@ -6389,6 +6427,10 @@ Prefab:
       propertyPath: m_Name
       value: Skull (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
+      propertyPath: m_TagString
+      value: Skull
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
   m_IsPrefabAsset: 0
@@ -8440,6 +8482,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
+      propertyPath: m_TagString
+      value: Skull
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
   m_IsPrefabAsset: 0
@@ -8705,6 +8751,10 @@ Prefab:
     - target: {fileID: 400004, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
+      propertyPath: m_TagString
+      value: Skull
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cbbe65c7f1dbe24095ce4378899a61e, type: 3}
@@ -9851,6 +9901,40 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3903cfb12a626c4fa98166f8c8494a3, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1868981327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e,
+    type: 3}
+  m_PrefabInternal: {fileID: 1516986181}
+--- !u!65 &1868981330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1868981327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 4, z: 7}
+  m_Center: {x: 0.00012207033, y: -0.095578015, z: -0.0021246076}
+--- !u!1 &1891817069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 4cbbe65c7f1dbe24095ce4378899a61e,
+    type: 3}
+  m_PrefabInternal: {fileID: 1494951818}
+--- !u!65 &1891817072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1891817069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7, y: 7, z: 7}
+  m_Center: {x: 0.00006103518, y: -0.09557778, z: -0.0020635724}
 --- !u!1 &1933793802
 GameObject:
   m_ObjectHideFlags: 0

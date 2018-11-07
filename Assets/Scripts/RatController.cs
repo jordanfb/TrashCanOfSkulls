@@ -25,7 +25,15 @@ public class RatController : MonoBehaviour {
     [SerializeField]
     private PatrolScript patrolScript; // the rat may be patrolling, if so, it should stop patrolling when it spots the player, duh.
 
+
+    [SerializeField]
+    private float stunAnimationSpeed = .5f;
+
+    [Space]
     public bool chasingPlayer = false;
+    private bool isStunned = false; // if this is true then it won't be able to move so stop following the path!
+    private float stunTimer = 0;
+
 
     [SerializeField]
     private Animation animator; // so that we can control the rat model!
@@ -41,7 +49,16 @@ public class RatController : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
+        animator.AddClip(animator["Stun"].clip, "UnStun");
+        animator["UnStun"].speed = -1;
+        animator["Stun"].speed = stunAnimationSpeed;
+
+        animator["UnStun"].time = animator["UnStun"].length;
+        animator["UnStun"].wrapMode = WrapMode.ClampForever;
+        animator["Stun"].wrapMode = WrapMode.ClampForever;
+
         PlayAnimation();
         if (patrolScript)
         {
@@ -52,35 +69,65 @@ public class RatController : MonoBehaviour {
     [ContextMenu("ANIMATION RUN THING HOPEFULLY")]
     public void PlayAnimation()
     {
-        animator.Rewind();
-        animator.wrapMode = WrapMode.Loop;
+        Rewind();
+        // animator.wrapMode = WrapMode.Loop;
         animator["Walk"].speed = 1.5f;
         animator["Walk"].wrapMode = WrapMode.Loop;
-        animator.Play();
+        animator.Play("Walk");
+    }
+
+    private void Rewind()
+    {
+        // this is a custom function to do this because we have to correct the time for the UnStun animation
+        animator.Rewind();
+        animator["UnStun"].time = animator["UnStun"].length;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (!chasingPlayer && chasePlayerIfSpotted)
-        {
-            if (CanSeePlayer())
+        if (isStunned) {
+            // count down the timer
+            // Debug.Log(animator.IsPlaying("UnStun"));
+            // Debug.Log(animator["UnStun"].time);
+            print(animator["Stun"].clip.length);
+            if (animator["Stun"].time <= .2f)
             {
-                // then chase the player!
-                StartChasingPlayer();
+                // keep it between .2 and the ending whih is something like .29 or .27 seconds
+                animator["Stun"].speed = stunAnimationSpeed;
+            } else if (animator["Stun"].time >= animator["Stun"].clip.length)
+            {
+                animator["Stun"].speed = -stunAnimationSpeed; // go back
+            }
+            stunTimer -= Time.deltaTime;
+            if (stunTimer <= 0)
+            {
+                UnStunRat();
             }
         }
-
-        if (chasingPlayer)
+        else
         {
-            // CanSeePlayer();
-            if (LostTrackOfPlayer() && canLooseTrackOfPlayer)
+            if (!chasingPlayer && chasePlayerIfSpotted)
             {
-                // then stop chasing the player!
-                StopChasingPlayer(false);
-            } else
+                if (CanSeePlayer())
+                {
+                    // then chase the player!
+                    StartChasingPlayer();
+                }
+            }
+
+            if (chasingPlayer)
             {
-                // chase the player!
-                navMeshAgent.SetDestination(player.transform.position);
+                // CanSeePlayer();
+                if (LostTrackOfPlayer() && canLooseTrackOfPlayer)
+                {
+                    // then stop chasing the player!
+                    StopChasingPlayer(false);
+                }
+                else
+                {
+                    // chase the player!
+                    navMeshAgent.SetDestination(player.transform.position);
+                }
             }
         }
     }
@@ -141,5 +188,44 @@ public class RatController : MonoBehaviour {
             patrolScript.StartPatrolling();
             Debug.Log("Start patrolling");
         }
+    }
+
+    [ContextMenu("Kill Player")]
+    public void CatchPlayer()
+    {
+        // if you catch the player then KILL THEM
+        // animator["PlayerKill"].weight = 0;
+    }
+
+    public void UnStunRat()
+    {
+        isStunned = false;
+        stunTimer = 0;
+        navMeshAgent.isStopped = false;
+        animator.PlayQueued("Walk");
+        Debug.Log("Rat no longer stunned");
+        animator["Walk"].weight = 0;
+        animator.Blend("Walk", 1, 1);
+        animator.Blend("Stun", 0, 1);
+    }
+
+    [ContextMenu("Stun rat")]
+    private void TestStunRat()
+    {
+        StunRat();
+    }
+
+    public void StunRat(float time = 5)
+    {
+        stunTimer = time;
+        isStunned = true;
+        animator.PlayQueued("Stun");
+        // animator["UnStun"].time = animator["UnStun"].length;
+        // animator.PlayQueued("UnStun", QueueMode.CompleteOthers, PlayMode.StopAll);
+        Debug.Log("Rat stunned");
+        navMeshAgent.isStopped = true;
+        animator["Stun"].weight = 0;
+        animator.Blend("Stun", 1, 1);
+        animator.Blend("Walk", 0, 1);
     }
 }

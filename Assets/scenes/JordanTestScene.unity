@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolAreaLimit: {fileID: 0}
-  patrolAreaRadius: 25.77
+  patrolAreaRadius: 40
   rats:
   - {fileID: 1616473084}
 --- !u!4 &1856922927
@@ -296,7 +296,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1856922925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.50276, y: 6.6520033, z: 125.708664}
+  m_LocalPosition: {x: 159.9, y: 6.6520033, z: 112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -471,8 +471,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  rotateSpeedX: 0
-  rotateSpeedY: 0
+  cam: {fileID: 0}
+  footStep: {fileID: 0}
 --- !u!136 &2051792955
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -589,6 +589,46 @@ Prefab:
         type: 2}
       propertyPath: distanceAlwaysSeen
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[1].x
+      value: 155.18567
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[1].z
+      value: 107.826004
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[2].x
+      value: 183.97682
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[2].z
+      value: 87.299805
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[3].x
+      value: 182.24112
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[3].z
+      value: 106.910126
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[0].x
+      value: 145.99753
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848985854433814, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: patrolPoints.Array.data[0].z
+      value: 127.22324
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}

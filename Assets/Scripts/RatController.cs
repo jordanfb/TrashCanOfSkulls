@@ -18,6 +18,8 @@ public class RatController : MonoBehaviour {
     private float distanceAlwaysSeen;
     [SerializeField]
     private float ratSightAngle = 40; // between + and - 40 degrees
+    [SerializeField]
+    private float looseTrackDistance = 20;
 
     [Space]
     [SerializeField]
@@ -70,6 +72,7 @@ public class RatController : MonoBehaviour {
 
         if (chasingPlayer)
         {
+            // CanSeePlayer();
             if (LostTrackOfPlayer() && canLooseTrackOfPlayer)
             {
                 // then stop chasing the player!
@@ -86,16 +89,23 @@ public class RatController : MonoBehaviour {
     {
         // first find the distance, if you're within a certain distance then the rat can see you
         Vector3 dpos = player.transform.position - transform.position;
+        if (dpos.magnitude >= looseTrackDistance && canLooseTrackOfPlayer)
+        {
+            return false; // you can't see the player this far away otherwise the behavior breaks
+        }
         if (dpos.magnitude < distanceAlwaysSeen)
         {
+            Debug.Log("Caught sight of the player it was within the distance");
             return true;
         }
-        float angle = Mathf.Atan2(dpos.z, dpos.x)*Mathf.Rad2Deg;
+        float angle = Vector2.Angle(transform.forward, dpos);
+        // float angle = Mathf.Atan2(dpos.z, dpos.x)*Mathf.Rad2Deg;
         // Debug.Log(angle);
         if (Mathf.Abs(angle) < ratSightAngle)
         {
             // then check if the rat can see the player with a raycast I guess.
             // this should really use a raycast, but for now just return true.
+            Debug.Log("Caught sight of player it was within the angle");
             return true;
         }
         return false;
@@ -103,6 +113,12 @@ public class RatController : MonoBehaviour {
 
     bool LostTrackOfPlayer()
     {
+        Vector3 dpos = player.transform.position - transform.position;
+        if (dpos.magnitude >= looseTrackDistance)
+        {
+            Debug.Log("Lost track of player it was too far away");
+            return true;
+        }
         return false; // gets called if the player is out of range of the king and out of sight probably.
     }
 
@@ -123,6 +139,7 @@ public class RatController : MonoBehaviour {
         if (patrolScript)
         {
             patrolScript.StartPatrolling();
+            Debug.Log("Start patrolling");
         }
     }
 }

@@ -1339,7 +1339,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1056963992255064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 152, y: 1, z: 118.5}
+  m_LocalPosition: {x: 119.2, y: 0, z: 352.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4776436892408726}
@@ -1454,15 +1454,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1278354453548930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.94, z: 0}
+  m_LocalRotation: {x: -0.31233492, y: 0, z: 0, w: 0.9499721}
+  m_LocalPosition: {x: 0, y: -2.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4651033577534160}
   - {fileID: 4505595558271206}
   m_Father: {fileID: 4623062527146352}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -36.4, y: 0, z: 0}
 --- !u!4 &4779197148313864
 Transform:
   m_ObjectHideFlags: 1
@@ -1716,8 +1716,9 @@ MonoBehaviour:
   player: {fileID: 0}
   chasePlayerIfSpotted: 1
   canLooseTrackOfPlayer: 1
-  distanceAlwaysSeen: 0
-  ratSightAngle: 40
+  distanceAlwaysSeen: 4
+  ratSightAngle: 20
+  looseTrackDistance: 50
   patrolScript: {fileID: 114848985854433814}
   chasingPlayer: 0
   animator: {fileID: 111218161280518084}
@@ -1738,12 +1739,10 @@ MonoBehaviour:
   distanceToPatrolPoint: 1
   ignoreZPosition: 1
   patrolPoints:
-  - {x: 163.1417, y: 1, z: 111}
-  - {x: 134.11394, y: 1, z: 135.39035}
-  - {x: 141.48787, y: 0.6600456, z: 117.44819}
-  - {x: 121.52094, y: 2.738285, z: 124.83077}
-  - {x: 130.77693, y: 4.100233, z: 110.70075}
-  - {x: 139.68549, y: 2.7496567, z: 105.52026}
+  - {x: 121.64552, y: 1, z: 370.6121}
+  - {x: 108.50603, y: 1, z: 336.9487}
+  - {x: 147.2206, y: 1, z: 340.06534}
+  - {x: 155.13345, y: 1, z: 367.6336}
 --- !u!136 &136827241509561270
 CapsuleCollider:
   m_ObjectHideFlags: 1

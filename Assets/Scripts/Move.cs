@@ -10,6 +10,8 @@ public class Move : MonoBehaviour {
     public Camera cam;
     private Vector3 camDir;
     private Vector3 camSid;
+    public AudioSource footStep;
+    bool playing = false;
 
     // Use this for initialization
     void Start () {
@@ -28,6 +30,16 @@ public class Move : MonoBehaviour {
         if (Mathf.Abs(Input.GetAxis("Vertical")) > 0)
         {
             transform.position = transform.position + Input.GetAxis("Vertical") * camDir * Time.deltaTime * speed;
+        }
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0 && !playing || Mathf.Abs(Input.GetAxis("Vertical")) > 0 && !playing)
+        {
+            footStep.Play();
+            playing = true;
+        }
+        if (Mathf.Abs(Input.GetAxis("Horizontal")) == 0 && Mathf.Abs(Input.GetAxis("Vertical")) == 0)
+        {
+            footStep.Stop();
+            playing = false;
         }
     }
 }

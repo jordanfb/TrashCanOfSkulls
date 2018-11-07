@@ -20642,9 +20642,9 @@ MonoBehaviour:
   vial: {fileID: 1793026068575122, guid: 7261fc8f00baa5e418804e14a9d0c134, type: 2}
   playerCamera: {fileID: 1035125389}
   action: {fileID: 217376849}
-  vialPosition: {x: -0.1, y: -0.2, z: 0.3}
-  vialThrowingForce: 3000
-  vialAmount: 100
+  vialPosition: {x: -0.2, y: -0.4, z: 0.5}
+  vialThrowingForce: 2000
+  vialAmount: 0
   useThrowAnimation: 1
 --- !u!1 &1754098498
 GameObject:

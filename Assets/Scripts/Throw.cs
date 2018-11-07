@@ -18,7 +18,7 @@ public class Throw : MonoBehaviour {
 
     // Use this for initialization
     void Start() {
-
+        action["Throw"].speed = 1.5f;
     }
 
     public void SetPlayerControllable(bool state)

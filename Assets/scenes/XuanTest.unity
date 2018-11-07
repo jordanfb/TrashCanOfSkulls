@@ -214,7 +214,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4518870883674062, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4518870883674062, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
       propertyPath: m_LocalScale.x
@@ -905,7 +905,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4518870883674062, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4518870883674062, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
       propertyPath: m_LocalScale.x
@@ -2899,6 +2899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 50
   cam: {fileID: 1035125392}
+  footStep: {fileID: 0}
 --- !u!65 &1751670456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2995,9 +2996,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vial: {fileID: 1793026068575122, guid: 7261fc8f00baa5e418804e14a9d0c134, type: 2}
   playerCamera: {fileID: 1035125389}
-  amount: 3
+  action: {fileID: 2021422684}
   vialPosition: {x: -0.1, y: -0.2, z: 0.3}
   vialThrowingForce: 1200
+  vialAmount: 3
+  sphereRadius: 0
 --- !u!1 &1754098498
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,7 +3036,7 @@ Light:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1754098498}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3431,3 +3434,8 @@ Transform:
   m_Father: {fileID: 511465870}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &2021422684 stripped
+Animation:
+  m_CorrespondingSourceObject: {fileID: 11100000, guid: 0a080dfa613cb7640a36e604664f2832,
+    type: 3}
+  m_PrefabInternal: {fileID: 269184860}

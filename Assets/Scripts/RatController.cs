@@ -210,7 +210,7 @@ public class RatController : MonoBehaviour {
         if (patrolScript)
         {
             patrolScript.StartPatrolling();
-            Debug.Log("Start patrolling");
+            // Debug.Log("Start patrolling");
         }
     }
 
@@ -236,7 +236,7 @@ public class RatController : MonoBehaviour {
         stunTimer = 0;
         navMeshAgent.isStopped = false;
         animator.PlayQueued("Walk");
-        Debug.Log("Rat no longer stunned");
+        // Debug.Log("Rat no longer stunned");
         animator["Walk"].weight = 0;
         animator.Blend("Walk", 1, 1);
         animator.Blend("Stun", 0, 1);
@@ -260,7 +260,7 @@ public class RatController : MonoBehaviour {
         animator.PlayQueued("Stun");
         // animator["UnStun"].time = animator["UnStun"].length;
         // animator.PlayQueued("UnStun", QueueMode.CompleteOthers, PlayMode.StopAll);
-        Debug.Log("Rat stunned");
+        // Debug.Log("Rat stunned");
         navMeshAgent.isStopped = true;
         animator["Stun"].time = 0;
         animator["Stun"].weight = 0;

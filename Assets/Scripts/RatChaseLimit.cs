@@ -28,7 +28,7 @@ public class RatChaseLimit : MonoBehaviour {
                 if (Vector3.Distance(r.transform.position, transform.position) > patrolAreaRadius)
                 {
                     // stop it from chasing the player
-                    Debug.Log("Rat is outside zone so stop chasing");
+                    // Debug.Log("Rat is outside zone so stop chasing");
                     r.StopChasingPlayer(true);
                 }
             }

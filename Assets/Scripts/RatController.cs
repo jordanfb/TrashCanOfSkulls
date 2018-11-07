@@ -24,7 +24,8 @@ public class RatController : MonoBehaviour {
     [Space]
     [SerializeField]
     private PatrolScript patrolScript; // the rat may be patrolling, if so, it should stop patrolling when it spots the player, duh.
-
+    [SerializeField]
+    private Transform ratHead;
 
     [SerializeField]
     private float stunAnimationSpeed = .5f;
@@ -203,7 +204,13 @@ public class RatController : MonoBehaviour {
     public void CatchPlayer()
     {
         // if you catch the player then KILL THEM
-        // animator["PlayerKill"].weight = 0;
+        // animator["PlayerDeath"].weight = 0;
+        animator.Play("PlayerDeath");
+        player.SetPlayerControllable(false);
+        // here we need to do some magic.
+        // we want to turn the player towards the mouse and move it towards the head as well
+        // and also fade to black
+        player.SetKillingRat(this, ratHead);
     }
 
     public void UnStunRat()
@@ -233,6 +240,7 @@ public class RatController : MonoBehaviour {
         // animator.PlayQueued("UnStun", QueueMode.CompleteOthers, PlayMode.StopAll);
         Debug.Log("Rat stunned");
         navMeshAgent.isStopped = true;
+        animator["Stun"].time = 0;
         animator["Stun"].weight = 0;
         animator.Blend("Stun", 1, 1);
         animator.Blend("Walk", 0, 1);

@@ -15,13 +15,20 @@ public class pickUp : MonoBehaviour {
     public bool cured = false;
     public GameObject wall;
 
+    private bool isPlayerControllable = true;
+
     // Use this for initialization
     void Start () {
         img.enabled = false;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void SetPlayerControllable(bool state)
+    {
+        isPlayerControllable = state;
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (img.enabled == true)
         {
             if (Input.GetKeyDown(KeyCode.Mouse1))
@@ -45,28 +52,35 @@ public class pickUp : MonoBehaviour {
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Notebook")
+        if (isPlayerControllable)
         {
-            txt.text = "Press E to pick up";
-            if (Input.GetKeyDown(KeyCode.E))
+            if (other.tag == "Notebook")
             {
-                img.enabled = true;
-                img.text = other.GetComponent<TextHolder>().data.ToString();
-                //Also can increment count here
-                Destroy(other.gameObject);
-                txt.text = "Press RMB to close";
+                txt.text = "Press E to pick up";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    img.enabled = true;
+                    img.text = other.GetComponent<TextHolder>().data.ToString();
+                    //Also can increment count here
+                    Destroy(other.gameObject);
+                    txt.text = "Press RMB to close";
+                }
             }
-        }
-        else if (other.tag == "Skull")
+            else if (other.tag == "Skull")
+            {
+                txt.text = "Press E to pick up";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    Destroy(other.gameObject);
+                    skullCount += 1;
+                    //increment counter here
+                    txt.text = "";
+                }
+            }
+        } else
         {
-            txt.text = "Press E to pick up";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Destroy(other.gameObject);
-                skullCount += 1;
-                //increment counter here
-                txt.text = "";
-            }
+            img.enabled = false;
+            txt.enabled = false;
         }
         else if (other.tag == "Vial" && GetComponent<Throw>().vialAmount < 3)
         {

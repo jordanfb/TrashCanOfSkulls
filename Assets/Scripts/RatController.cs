@@ -158,7 +158,7 @@ public class RatController : MonoBehaviour {
         }
         if (dpos.magnitude < distanceAlwaysSeen)
         {
-            Debug.Log("Caught sight of the player it was within the distance");
+            // Debug.Log("Caught sight of the player it was within the distance");
             return true;
         }
         float angle = Vector2.Angle(transform.forward, dpos);
@@ -168,7 +168,7 @@ public class RatController : MonoBehaviour {
         {
             // then check if the rat can see the player with a raycast I guess.
             // this should really use a raycast, but for now just return true.
-            Debug.Log("Caught sight of player it was within the angle");
+            // Debug.Log("Caught sight of player it was within the angle");
             return true;
         }
         return false;
@@ -179,7 +179,7 @@ public class RatController : MonoBehaviour {
         Vector3 dpos = player.transform.position - transform.position;
         if (dpos.magnitude >= looseTrackDistance)
         {
-            Debug.Log("Lost track of player it was too far away");
+            // Debug.Log("Lost track of player it was too far away");
             return true;
         }
         return false; // gets called if the player is out of range of the king and out of sight probably.

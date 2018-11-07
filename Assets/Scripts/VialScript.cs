@@ -24,7 +24,7 @@ public class VialScript : MonoBehaviour {
         {
             GetComponent<AudioSource>().Play();
             readyToExplode = false;
-            Debug.Log("VIAL HIT SOMETHING OH GOD KILL EVERYTHING");
+            // Debug.Log("VIAL HIT SOMETHING OH GOD KILL EVERYTHING");
             particleSys.Play();
             // then circle cast to see if we can hit the enemy nearby
             RaycastHit hit;
@@ -34,10 +34,10 @@ public class VialScript : MonoBehaviour {
             foreach (RaycastHit h in hits)
             {
                 RatController rat = h.transform.GetComponent<RatController>();
-                Debug.Log("VIAL HIT ENEMY");
+                // Debug.Log("VIAL HIT ENEMY");
                 if (rat)
                 {
-                    Debug.Log("STUNN RAT");
+                    // Debug.Log("STUNN RAT");
                     // then stun the rat
                     rat.StunRat();
                 }

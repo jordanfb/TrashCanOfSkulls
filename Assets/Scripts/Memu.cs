@@ -24,6 +24,12 @@ public class Memu : MonoBehaviour {
         if (button.name == "Quit") {
             Application.Quit();
         }
+        if (button.name == "About") {
+            SceneManager.LoadScene("About");
+        }
+        if (button.name == "Back") {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
 }

@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class pickUp : MonoBehaviour {
 
     public Text txt;
     public Text img;
     public Text skulls;
+    public Text vials;
     private int skullCount;
+    private bool gotVial = false;
+    private bool cured = false;
+    public GameObject wall;
 
     // Use this for initialization
     void Start () {
@@ -19,14 +24,23 @@ public class pickUp : MonoBehaviour {
 	void Update () {
         if (img.enabled == true)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 //increment count here if you want
                 img.enabled = false;
                 txt.text = "";
             }
         }
-        skulls.text = "Skulls: " + skullCount + "/4";
+        if (gotVial)
+        {
+            skulls.text = "Skulls: " + skullCount + "/4";
+            vials.text = "Vials: " + GetComponent<Throw>().vialAmount + "/3";
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            skullCount = 4;
+        }
+       
     }
 
     private void OnTriggerStay(Collider other)
@@ -40,7 +54,7 @@ public class pickUp : MonoBehaviour {
                 img.text = other.GetComponent<TextHolder>().data.ToString();
                 //Also can increment count here
                 Destroy(other.gameObject);
-                txt.text = "Press LMB to close";
+                txt.text = "Press RMB to close";
             }
         }
         else if (other.tag == "Skull")
@@ -52,6 +66,41 @@ public class pickUp : MonoBehaviour {
                 skullCount += 1;
                 //increment counter here
                 txt.text = "";
+            }
+        }
+        else if (other.tag == "Vial" && GetComponent<Throw>().vialAmount < 3)
+        {
+            txt.text = "Press E to pick up";
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                //increment counter here
+                if (!gotVial)
+                {
+                    gotVial = true;
+                    Destroy(wall);
+                }
+                GetComponent<Throw>().vialAmount = 3;
+                txt.text = "";
+            }
+        }
+        else if (other.tag == "Cure" && skullCount == 4)
+        {
+            txt.text = "Press E to create the cure";
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                cured = true;
+                txt.text = "";
+                skullCount = 0;
+            }
+        }
+        else if (other.tag == "ReleaseZone" && cured)
+        {
+            txt.text = "Press E to release the cure";
+            if (Input.GetKeyDown(KeyCode.E))
+            {       
+                txt.text = "";
+                cured = false;
+                SceneManager.LoadScene("Win");
             }
         }
     }

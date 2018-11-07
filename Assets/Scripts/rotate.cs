@@ -18,6 +18,7 @@ public class rotate : MonoBehaviour {
 	void Update () {
         rotateX += rotateSpeedX * Input.GetAxis("Mouse X");
         rotateY -= rotateSpeedY * Input.GetAxis("Mouse Y");
+        rotateY = Mathf.Clamp(rotateY, -90, 90);
         transform.eulerAngles = new Vector3(rotateY, rotateX, 0);
     }
 }

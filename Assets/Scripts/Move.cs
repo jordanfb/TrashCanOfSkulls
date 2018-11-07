@@ -97,7 +97,7 @@ public class Move : MonoBehaviour {
 
             if (deadRotationTimer > 2)
             {
-
+                LevelManager.UnlockMouse();
                 SceneManager.LoadScene("Lose");
             }
         }

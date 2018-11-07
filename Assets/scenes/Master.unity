@@ -911,6 +911,11 @@ Prefab:
       propertyPath: m_Speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 195036788830304994, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}
   m_IsPrefabAsset: 0
@@ -8979,6 +8984,11 @@ Prefab:
       propertyPath: m_Speed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 195036788830304994, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}
   m_IsPrefabAsset: 0
@@ -12801,6 +12811,11 @@ Prefab:
         type: 2}
       propertyPath: m_Speed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 195036788830304994, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}
@@ -21186,6 +21201,11 @@ Prefab:
     - target: {fileID: 1056963992255064, guid: 3e15d86efc6293945a83872170702f3d, type: 2}
       propertyPath: m_Name
       value: RatKingCureChase
+      objectReference: {fileID: 0}
+    - target: {fileID: 195036788830304994, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}

@@ -23,6 +23,12 @@ public class LevelManager : MonoBehaviour {
         }
 	}
 
+    public static void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
 
     void ExitToMenu()
     {

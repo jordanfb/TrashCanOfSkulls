@@ -109,6 +109,7 @@ public class pickUp : MonoBehaviour {
                 {
                     txt.text = "";
                     cured = false;
+                    LevelManager.UnlockMouse();
                     SceneManager.LoadScene("Win");
                 }
             }

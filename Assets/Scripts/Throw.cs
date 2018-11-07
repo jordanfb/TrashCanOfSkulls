@@ -12,14 +12,21 @@ public class Throw : MonoBehaviour {
 
     public int vialAmount;
 
+    private bool isPlayerControllable = true;
+
     // Use this for initialization
     void Start() {
 
     }
 
+    public void SetPlayerControllable(bool state)
+    {
+        isPlayerControllable = state;
+    }
+
     // Update is called once per frame
     void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (isPlayerControllable && Input.GetMouseButtonDown(0)) {
             if (vialAmount > 0) {
 
                 GameObject instance = Instantiate(vial, playerCamera.transform.position 

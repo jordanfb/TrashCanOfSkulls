@@ -5,11 +5,12 @@ using UnityEngine;
 public class Throw : MonoBehaviour {
     public GameObject vial;
     public GameObject playerCamera;
+    public Animation action;
 
     public Vector3 vialPosition;
     public float vialThrowingForce;
 
-    public int vialAmount = 0;
+    public int vialAmount;
 
     // Use this for initialization
     void Start() {
@@ -20,6 +21,7 @@ public class Throw : MonoBehaviour {
     void Update() {
         if (Input.GetMouseButtonDown(0)) {
             if (vialAmount > 0) {
+
                 GameObject instance = Instantiate(vial, playerCamera.transform.position 
                                                       + playerCamera.transform.forward * vialPosition.z
                                                       + playerCamera.transform.right * vialPosition.y
@@ -27,6 +29,7 @@ public class Throw : MonoBehaviour {
                 instance.GetComponent<Rigidbody>().useGravity = true;
                 instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * vialPosition.z * vialThrowingForce);
                 vialAmount -= 1;
+                action.Play("Throw");
             }
         }
     }

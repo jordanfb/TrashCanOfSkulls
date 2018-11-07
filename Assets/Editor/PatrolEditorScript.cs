@@ -14,7 +14,10 @@ public class PatrolEditorScript : Editor {
         for (int i = 0; i < ps.patrolPoints.Count; i++)
         {
             ps.patrolPoints[i] = Handles.DoPositionHandle(ps.patrolPoints[i], Quaternion.identity);
-            Debug.DrawLine(ps.patrolPoints[i], ps.patrolPoints[(i + 1) % ps.patrolPoints.Count]);
+            if (!ps.destroyAtEndOfPath || i != ps.patrolPoints.Count - 1)
+            {
+                Debug.DrawLine(ps.patrolPoints[i], ps.patrolPoints[(i + 1) % ps.patrolPoints.Count]);
+            }
         }
 
         if (EditorGUI.EndChangeCheck())

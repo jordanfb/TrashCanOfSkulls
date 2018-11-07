@@ -12,7 +12,7 @@ public class pickUp : MonoBehaviour {
     public Text vials;
     private int skullCount;
     private bool gotVial = false;
-    private bool cured = false;
+    public bool cured = false;
     public GameObject wall;
 
     // Use this for initialization

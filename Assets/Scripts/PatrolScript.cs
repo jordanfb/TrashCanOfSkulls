@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class PatrolScript : MonoBehaviour {
@@ -18,6 +19,10 @@ public class PatrolScript : MonoBehaviour {
     private float distanceToPatrolPoint = 3;
     [SerializeField]
     private bool ignoreZPosition = true;
+    [SerializeField]
+    public bool destroyAtEndOfPath = false;
+    [SerializeField]
+    public UnityEvent eventAtEndOfPath;
 
     [Space]
     [SerializeField]
@@ -55,9 +60,15 @@ public class PatrolScript : MonoBehaviour {
         if (patrolForwards)
         {
             targetPatrolPoint++;
+            if (targetPatrolPoint >= patrolPoints.Count && destroyAtEndOfPath)
+            {
+                Destroy(gameObject);
+                eventAtEndOfPath.Invoke();
+            }
             targetPatrolPoint %= patrolPoints.Count;
         } else
         {
+            Debug.LogError("DONT USE BACKWARDS PATHS");
             targetPatrolPoint--;
             if (targetPatrolPoint < 0)
             {

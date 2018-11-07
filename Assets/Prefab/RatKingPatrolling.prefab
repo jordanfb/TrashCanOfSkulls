@@ -1720,6 +1720,7 @@ MonoBehaviour:
   ratSightAngle: 20
   looseTrackDistance: 50
   patrolScript: {fileID: 114848985854433814}
+  stunAnimationSpeed: 0.5
   chasingPlayer: 0
   animator: {fileID: 111218161280518084}
   navMeshAgent: {fileID: 195036788830304994}
@@ -1738,6 +1739,12 @@ MonoBehaviour:
   patrolForwards: 1
   distanceToPatrolPoint: 1
   ignoreZPosition: 1
+  destroyAtEndOfPath: 0
+  eventAtEndOfPath:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   patrolPoints:
   - {x: 121.64552, y: 1, z: 370.6121}
   - {x: 108.50603, y: 1, z: 336.9487}
@@ -1856,7 +1863,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 6
+  m_Speed: 15
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

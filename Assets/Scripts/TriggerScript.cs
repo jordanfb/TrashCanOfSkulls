@@ -19,7 +19,7 @@ public class TriggerScript : MonoBehaviour {
         if (other.tag.Equals("Player"))
         {
             Debug.Log("Player hit trigger");
-            if (!requirePlayerHasCure || false)
+            if (!requirePlayerHasCure || pickUpScript.cured)
             {
                 // then run the event
                 Debug.Log("Trigger Triggered");

@@ -106,6 +106,7 @@ public class RatController : MonoBehaviour {
         }
         else
         {
+            CheckKillPlayer();
             if (!chasingPlayer && chasePlayerIfSpotted)
             {
                 if (CanSeePlayer())
@@ -129,6 +130,14 @@ public class RatController : MonoBehaviour {
                     navMeshAgent.SetDestination(player.transform.position);
                 }
             }
+        }
+    }
+
+    private void CheckKillPlayer()
+    {
+        if (Vector3.Distance(player.transform.position, transform.position) < 3)
+        {
+            CatchPlayer();
         }
     }
 

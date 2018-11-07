@@ -231,6 +231,7 @@ public class RatController : MonoBehaviour {
 
     public void UnStunRat()
     {
+        movements.Play();
         isStunned = false;
         stunTimer = 0;
         navMeshAgent.isStopped = false;
@@ -249,6 +250,11 @@ public class RatController : MonoBehaviour {
 
     public void StunRat(float time = 5)
     {
+        movements.Stop();
+        int myRand = Random.Range(0, 6);
+        vocals.clip = screams[myRand];
+        vocals.loop = false;
+        vocals.Play();
         stunTimer = time;
         isStunned = true;
         animator.PlayQueued("Stun");

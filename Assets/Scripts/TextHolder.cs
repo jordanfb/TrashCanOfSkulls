@@ -5,7 +5,6 @@ using UnityEngine;
 public class TextHolder : MonoBehaviour {
 
     public TextAsset data;
-    public string data2 = "Hello Wold";
 
 	// Use this for initialization
 	void Start () {

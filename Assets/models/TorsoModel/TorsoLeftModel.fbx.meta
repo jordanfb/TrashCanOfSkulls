@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ae0625e43e9de4cf18341eea5539bd39
+guid: 80f70cd40ebb54de6b6686cb60e1b592
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -22,46 +22,27 @@ ModelImporter:
     100032: L_Thumb2
     100034: L_Thumb3
     100036: L_Wrist
-    100038: Lantern:pCone1
-    100040: Lantern:pCylinder1
-    100042: Lantern:pCylinder2
-    100044: Lantern:polySurface1
-    100046: Lantern:polySurface1 1
-    100048: Lantern:polySurface2
-    100050: Lantern:polySurface3
-    100052: Lantern:polySurface4
-    100054: Lantern:pTorus1
-    100056: Lantern:pTorus2
-    100058: Lantern:transform1
-    100060: Lantern:transform2
-    100062: Lantern:transform3
-    100064: Lantern:transform4
-    100066: Lantern:transform5
-    100068: Lantern:transform6
-    100070: Lantern:transform7
-    100072: Lantern:transform8
-    100074: Lantern:transform9
-    100076: pSphere6
-    100078: R_Elbow
-    100080: R_Index1
-    100082: R_Index2
-    100084: R_Index3
-    100086: R_Middle1
-    100088: R_Middle2
-    100090: R_Middle3
-    100092: R_Pinkie1
-    100094: R_Pinkie2
-    100096: R_Pinkie3
-    100098: R_Ring1
-    100100: R_Ring2
-    100102: R_Ring3
-    100104: R_Shoulder
-    100106: R_Thumb1
-    100108: R_Thumb2
-    100110: R_Thumb3
-    100112: R_Wrist
-    100114: Torso
-    100116: //RootNode
+    100038: pSphere6
+    100040: R_Elbow
+    100042: R_Index1
+    100044: R_Index2
+    100046: R_Index3
+    100048: R_Middle1
+    100050: R_Middle2
+    100052: R_Middle3
+    100054: R_Pinkie1
+    100056: R_Pinkie2
+    100058: R_Pinkie3
+    100060: R_Ring1
+    100062: R_Ring2
+    100064: R_Ring3
+    100066: R_Shoulder
+    100068: R_Thumb1
+    100070: R_Thumb2
+    100072: R_Thumb3
+    100074: R_Wrist
+    100076: Torso
+    100078: //RootNode
     400000: Clavicle
     400002: L_Elbow
     400004: L_Index1
@@ -81,52 +62,31 @@ ModelImporter:
     400032: L_Thumb2
     400034: L_Thumb3
     400036: L_Wrist
-    400038: Lantern:pCone1
-    400040: Lantern:pCylinder1
-    400042: Lantern:pCylinder2
-    400044: Lantern:polySurface1
-    400046: Lantern:polySurface1 1
-    400048: Lantern:polySurface2
-    400050: Lantern:polySurface3
-    400052: Lantern:polySurface4
-    400054: Lantern:pTorus1
-    400056: Lantern:pTorus2
-    400058: Lantern:transform1
-    400060: Lantern:transform2
-    400062: Lantern:transform3
-    400064: Lantern:transform4
-    400066: Lantern:transform5
-    400068: Lantern:transform6
-    400070: Lantern:transform7
-    400072: Lantern:transform8
-    400074: Lantern:transform9
-    400076: pSphere6
-    400078: R_Elbow
-    400080: R_Index1
-    400082: R_Index2
-    400084: R_Index3
-    400086: R_Middle1
-    400088: R_Middle2
-    400090: R_Middle3
-    400092: R_Pinkie1
-    400094: R_Pinkie2
-    400096: R_Pinkie3
-    400098: R_Ring1
-    400100: R_Ring2
-    400102: R_Ring3
-    400104: R_Shoulder
-    400106: R_Thumb1
-    400108: R_Thumb2
-    400110: R_Thumb3
-    400112: R_Wrist
-    400114: Torso
-    400116: //RootNode
+    400038: pSphere6
+    400040: R_Elbow
+    400042: R_Index1
+    400044: R_Index2
+    400046: R_Index3
+    400048: R_Middle1
+    400050: R_Middle2
+    400052: R_Middle3
+    400054: R_Pinkie1
+    400056: R_Pinkie2
+    400058: R_Pinkie3
+    400060: R_Ring1
+    400062: R_Ring2
+    400064: R_Ring3
+    400066: R_Shoulder
+    400068: R_Thumb1
+    400070: R_Thumb2
+    400072: R_Thumb3
+    400074: R_Wrist
+    400076: Torso
+    400078: //RootNode
     2100000: lambert1
-    2300000: Lantern:polySurface1
-    3300000: Lantern:polySurface1
-    4300000: Lantern:polySurface1
-    7400000: Take 001
+    4300000: pSphere6
     9500000: //RootNode
+    13700000: pSphere6
   externalObjects: {}
   materials:
     importMaterials: 1

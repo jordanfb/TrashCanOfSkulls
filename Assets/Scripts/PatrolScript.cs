@@ -71,7 +71,7 @@ public class PatrolScript : MonoBehaviour {
     public void StartPatrolling()
     {
         patrolling = true;
-        targetPatrolPoint = GetClosestPathPoint();
+        targetPatrolPoint = GetClosestPoint();
         agent.SetDestination(patrolPoints[targetPatrolPoint]);
     }
 
@@ -81,9 +81,26 @@ public class PatrolScript : MonoBehaviour {
         patrolling = false;
     }
 
+    private int GetClosestPoint()
+    {
+        // gets the index of the closest point of the path in 3D space.
+        int closest = 0;
+        float minDistance = Vector3.Distance(transform.position, patrolPoints[0]);
+        for (int i = 1; i < patrolPoints.Count; i++)
+        {
+            float d = Vector3.Distance(transform.position, patrolPoints[i]);
+            if (d < minDistance)
+            {
+                minDistance = d;
+                closest = i;
+            }
+        }
+        return closest;
+    }
+
     private int GetClosestPathPoint()
     {
-        // gets the index of the closest path point.
+        // gets the index of the closest path point based on the navmesh walk distance
         int closest = 0;
         NavMeshPath currentPath = agent.path;
         agent.SetDestination(patrolPoints[0]);

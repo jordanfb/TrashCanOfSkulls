@@ -22,6 +22,7 @@ public class VialScript : MonoBehaviour {
     {
         if (readyToExplode)
         {
+            GetComponent<AudioSource>().Play();
             readyToExplode = false;
             Debug.Log("VIAL HIT SOMETHING OH GOD KILL EVERYTHING");
             particleSys.Play();

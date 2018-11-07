@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             // quit to the main menu
-            //ExitToMenu();
+            ExitToMenu();
         }
 	}
 

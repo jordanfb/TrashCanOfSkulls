@@ -585,6 +585,11 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 2051792954}
+    - target: {fileID: 114121573009822550, guid: 3e15d86efc6293945a83872170702f3d,
+        type: 2}
+      propertyPath: distanceAlwaysSeen
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e15d86efc6293945a83872170702f3d, type: 2}
   m_IsPrefabAsset: 0

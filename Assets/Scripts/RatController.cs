@@ -5,7 +5,6 @@ using UnityEngine.AI;
 using UnityEngine.Animations;
 
 public class RatController : MonoBehaviour {
-
     [SerializeField]
     private Move player; // for now connect to the move gameobject since I'm assuming that has info on player state
 
@@ -13,6 +12,12 @@ public class RatController : MonoBehaviour {
     private bool chasePlayerIfSpotted = true; // this is if the rat should chase the player if it sees the player
     [SerializeField]
     private bool canLooseTrackOfPlayer = true;
+    [Space]
+    [Header("The player searching information")]
+    [SerializeField]
+    private float distanceAlwaysSeen;
+    [SerializeField]
+    private float ratSightAngle = 40; // between + and - 40 degrees
 
     [Space]
     [SerializeField]
@@ -79,6 +84,20 @@ public class RatController : MonoBehaviour {
 
     bool CanSeePlayer()
     {
+        // first find the distance, if you're within a certain distance then the rat can see you
+        Vector3 dpos = player.transform.position - transform.position;
+        if (dpos.magnitude < distanceAlwaysSeen)
+        {
+            return true;
+        }
+        float angle = Mathf.Atan2(dpos.z, dpos.x)*Mathf.Rad2Deg;
+        // Debug.Log(angle);
+        if (Mathf.Abs(angle) < ratSightAngle)
+        {
+            // then check if the rat can see the player with a raycast I guess.
+            // this should really use a raycast, but for now just return true.
+            return true;
+        }
         return false;
     }
 

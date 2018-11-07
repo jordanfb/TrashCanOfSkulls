@@ -50,6 +50,15 @@ ModelImporter:
     100088: R_Leg
     100090: R_Thigh
     100092: Snout
+    100094: L_BugHand1
+    100096: L_BugHand2
+    100098: L_BugHand3
+    100100: L_Hand
+    100102: Lip
+    100104: R_BugHand1
+    100106: R_BugHand2
+    100108: R_BugHand3
+    100110: R_Hand
     400000: pCube12
     400002: pCube9
     400004: //RootNode
@@ -97,6 +106,15 @@ ModelImporter:
     400088: R_Leg
     400090: R_Thigh
     400092: Snout
+    400094: L_BugHand1
+    400096: L_BugHand2
+    400098: L_BugHand3
+    400100: L_Hand
+    400102: Lip
+    400104: R_BugHand1
+    400106: R_BugHand2
+    400108: R_BugHand3
+    400110: R_Hand
     2100000: lambert1
     2100002: lambert4
     2300000: pCube12
@@ -142,7 +160,7 @@ ModelImporter:
       name: Walk
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 25
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

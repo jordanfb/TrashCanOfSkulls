@@ -64,6 +64,7 @@ public class PatrolScript : MonoBehaviour {
             {
                 Destroy(gameObject);
                 eventAtEndOfPath.Invoke();
+                return;
             }
             targetPatrolPoint %= patrolPoints.Count;
         } else

@@ -27,12 +27,16 @@ public class VialScript : MonoBehaviour {
             particleSys.Play();
             // then circle cast to see if we can hit the enemy nearby
             RaycastHit hit;
-            if (Physics.SphereCast(transform.position, explosionRadius, transform.forward, out hit, 0, sphereCastLayerMask, QueryTriggerInteraction.Collide))
+            // Physics.SphereCastAll(transform.position, explosionRadius, transform.forward, out hit, 0, sphereCastLayerMask, QueryTriggerInteraction.Collide)
+            RaycastHit[] hits = Physics.SphereCastAll(transform.position, explosionRadius, transform.forward, 0, sphereCastLayerMask);
+
+            foreach (RaycastHit h in hits)
             {
-                RatController rat = hit.transform.GetComponent<RatController>();
+                RatController rat = h.transform.GetComponent<RatController>();
                 Debug.Log("VIAL HIT ENEMY");
                 if (rat)
                 {
+                    Debug.Log("STUNN RAT");
                     // then stun the rat
                     rat.StunRat();
                 }

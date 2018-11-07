@@ -77,45 +77,46 @@ public class pickUp : MonoBehaviour {
                     txt.text = "";
                 }
             }
-        } else
+            else if (other.tag == "Vial" && GetComponent<Throw>().vialAmount < 3)
+            {
+                txt.text = "Press E to pick up";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    //increment counter here
+                    if (!gotVial)
+                    {
+                        gotVial = true;
+                        Destroy(wall);
+                    }
+                    GetComponent<Throw>().vialAmount = 3;
+                    txt.text = "";
+                }
+            }
+            else if (other.tag == "Cure" && skullCount == 4)
+            {
+                txt.text = "Press E to create the cure";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    cured = true;
+                    txt.text = "";
+                    skullCount = 0;
+                }
+            }
+            else if (other.tag == "ReleaseZone" && cured)
+            {
+                txt.text = "Press E to release the cure";
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    txt.text = "";
+                    cured = false;
+                    SceneManager.LoadScene("Win");
+                }
+            }
+        }
+        else
         {
             img.enabled = false;
             txt.enabled = false;
-        }
-        else if (other.tag == "Vial" && GetComponent<Throw>().vialAmount < 3)
-        {
-            txt.text = "Press E to pick up";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //increment counter here
-                if (!gotVial)
-                {
-                    gotVial = true;
-                    Destroy(wall);
-                }
-                GetComponent<Throw>().vialAmount = 3;
-                txt.text = "";
-            }
-        }
-        else if (other.tag == "Cure" && skullCount == 4)
-        {
-            txt.text = "Press E to create the cure";
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                cured = true;
-                txt.text = "";
-                skullCount = 0;
-            }
-        }
-        else if (other.tag == "ReleaseZone" && cured)
-        {
-            txt.text = "Press E to release the cure";
-            if (Input.GetKeyDown(KeyCode.E))
-            {       
-                txt.text = "";
-                cured = false;
-                SceneManager.LoadScene("Win");
-            }
         }
     }
 

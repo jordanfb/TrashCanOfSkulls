@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114557202149575890}
   - component: {fileID: 198916671718775800}
   - component: {fileID: 199973342432431624}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Vial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6ffb33fd0009924eace0d19b423b5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionRadius: 5
+  explosionRadius: 10
   particleSys: {fileID: 198916671718775800}
   sphereCastLayerMask:
     serializedVersion: 2

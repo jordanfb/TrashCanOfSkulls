@@ -12,6 +12,8 @@ public class Throw : MonoBehaviour {
 
     public int vialAmount;
 
+    public bool useThrowAnimation = true;
+
     private bool isPlayerControllable = true;
 
     // Use this for initialization
@@ -36,7 +38,10 @@ public class Throw : MonoBehaviour {
                 instance.GetComponent<Rigidbody>().useGravity = true;
                 instance.GetComponent<Rigidbody>().AddForce(playerCamera.transform.forward * vialPosition.z * vialThrowingForce);
                 vialAmount -= 1;
-                action.Play("Throw");
+                if (useThrowAnimation)
+                {
+                    action.Play("Throw");
+                }
             }
         }
     }

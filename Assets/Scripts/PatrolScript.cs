@@ -30,7 +30,7 @@ public class PatrolScript : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
         agent = GetComponent<NavMeshAgent>();
     }
 	
@@ -82,7 +82,7 @@ public class PatrolScript : MonoBehaviour {
     public void StartPatrolling()
     {
         patrolling = true;
-        targetPatrolPoint = GetClosestPoint();
+        targetPatrolPoint = GetClosestPoint() % patrolPoints.Count;
         agent.SetDestination(patrolPoints[targetPatrolPoint]);
     }
 

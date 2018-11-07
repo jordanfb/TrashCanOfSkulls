@@ -33,7 +33,7 @@ public class Move : MonoBehaviour {
     private Vector3 deadPositionStartPosition;
     private Quaternion ratHeadRotation;
     private Quaternion deadStartRotation;
-    private float deadRotationTimer = 0;
+    public float deadRotationTimer = 0;
 
     // Use this for initialization
     void Start () {
@@ -47,16 +47,19 @@ public class Move : MonoBehaviour {
         throwScript.SetPlayerControllable(state);
         pickUpScript.SetPlayerControllable(state);
     }
-	
+
     public void SetKillingRat(RatController rat, Transform head)
     {
         // when the player dies this is the rat they should look at
-        isAlive = false;
-        ratHead = head;
-        ratHeadRotation = Quaternion.LookRotation(head.position - cam.transform.position);
-        deadStartRotation = cam.transform.rotation;
-        deadRotationTimer = 0;
-        deadPositionStartPosition = transform.position;
+        if (isAlive)
+        {
+            isAlive = false;
+            ratHead = head;
+            ratHeadRotation = Quaternion.LookRotation(head.position - cam.transform.position);
+            deadStartRotation = cam.transform.rotation;
+            deadRotationTimer = 0;
+            deadPositionStartPosition = transform.position;
+        }
     }
 
 	// Update is called once per frame
@@ -89,12 +92,13 @@ public class Move : MonoBehaviour {
 
             cam.transform.rotation = Quaternion.Lerp(deadStartRotation, ratHeadRotation, deadRotationTimer);
             deadRotationTimer += Time.deltaTime * deadRotationSpeed;
-            fadeToBlack.color = new Color(0, 0, 0, Mathf.Max(1, deadRotationTimer*.5f));
-            cam.transform.position = Vector3.Lerp(deadPositionStartPosition, ratHead.position, deadRotationTimer*.8f);
+            fadeToBlack.color = new Color(0, 0, 0, Mathf.Min(1, deadRotationTimer*.5f));
+            //cam.transform.position = Vector3.Lerp(deadPositionStartPosition, ratHead.position, deadRotationTimer*.8f);
 
             if (deadRotationTimer > 2)
             {
-                SceneManager.LoadScene("DeathScene");
+
+                SceneManager.LoadScene("Lose");
             }
         }
     }

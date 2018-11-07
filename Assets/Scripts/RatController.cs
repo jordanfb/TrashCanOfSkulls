@@ -207,9 +207,11 @@ public class RatController : MonoBehaviour {
         // animator["PlayerDeath"].weight = 0;
         animator.Play("PlayerDeath");
         player.SetPlayerControllable(false);
+        navMeshAgent.isStopped = true;
         // here we need to do some magic.
         // we want to turn the player towards the mouse and move it towards the head as well
         // and also fade to black
+        player.cam.transform.position = transform.forward * 4 + transform.position + Vector3.up*.5f;
         player.SetKillingRat(this, ratHead);
     }
 

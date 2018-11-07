@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations;
 
 public class RatController : MonoBehaviour {
 
@@ -16,12 +17,11 @@ public class RatController : MonoBehaviour {
     [Space]
     [SerializeField]
     private PatrolScript patrolScript; // the rat may be patrolling, if so, it should stop patrolling when it spots the player, duh.
-    
 
     public bool chasingPlayer = false;
 
     [SerializeField]
-    private Animator animator; // so that we can control the rat model!
+    private Animation animator; // so that we can control the rat model!
     [SerializeField]
     private NavMeshAgent navMeshAgent;
 
@@ -35,8 +35,22 @@ public class RatController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        PlayAnimation();
+        if (patrolScript)
+        {
+            patrolScript.StartPatrolling();
+        }
+    }
 
-	}
+    [ContextMenu("ANIMATION RUN THING HOPEFULLY")]
+    public void PlayAnimation()
+    {
+        animator.Rewind();
+        animator.wrapMode = WrapMode.Loop;
+        animator["Walk"].speed = 1.5f;
+        animator["Walk"].wrapMode = WrapMode.Loop;
+        animator.Play();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,7 +62,6 @@ public class RatController : MonoBehaviour {
                 StartChasingPlayer();
             }
         }
-
 
         if (chasingPlayer)
         {

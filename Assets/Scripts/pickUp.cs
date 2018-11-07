@@ -7,6 +7,8 @@ public class pickUp : MonoBehaviour {
 
     public Text txt;
     public Text img;
+    public Text skulls;
+    private int skullCount;
 
     // Use this for initialization
     void Start () {
@@ -24,6 +26,7 @@ public class pickUp : MonoBehaviour {
                 txt.text = "";
             }
         }
+        skulls.text = "Skulls: " + skullCount + "/4";
     }
 
     private void OnTriggerStay(Collider other)
@@ -35,9 +38,6 @@ public class pickUp : MonoBehaviour {
             {
                 img.enabled = true;
                 img.text = other.GetComponent<TextHolder>().data.ToString();
-                Debug.Log(img.text);
-                Debug.Log(other.GetComponent<TextHolder>().data.name);
-                Debug.Log(other.GetComponent<TextHolder>().data2);
                 //Also can increment count here
                 Destroy(other.gameObject);
                 txt.text = "Press LMB to close";
@@ -49,6 +49,7 @@ public class pickUp : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Destroy(other.gameObject);
+                skullCount += 1;
                 //increment counter here
                 txt.text = "";
             }

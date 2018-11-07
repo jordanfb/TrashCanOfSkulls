@@ -20043,6 +20043,10 @@ Prefab:
       propertyPath: m_TagString
       value: Notebook
       objectReference: {fileID: 0}
+    - target: {fileID: 1335041384937184, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
+      propertyPath: m_Name
+      value: Notebook (24)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da2891e0afc8e4f1dbcb2a7e9fa6ade0, type: 2}
   m_IsPrefabAsset: 0

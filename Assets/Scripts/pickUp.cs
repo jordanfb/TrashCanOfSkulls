@@ -14,6 +14,7 @@ public class pickUp : MonoBehaviour {
     private bool gotVial = false;
     public bool cured = false;
     public GameObject wall;
+    public GameObject trashSkulls;
 
     private bool isPlayerControllable = true;
 
@@ -97,6 +98,7 @@ public class pickUp : MonoBehaviour {
                 txt.text = "Press E to create the cure";
                 if (Input.GetKeyDown(KeyCode.E))
                 {
+                    trashSkulls.SetActive(true);
                     cured = true;
                     txt.text = "";
                     skullCount = 0;

@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class Move : MonoBehaviour {
 
-
     public float speed;
     private Rigidbody rgd;
-    public float rotateSpeedX;
-    public float rotateSpeedY;
     private Vector3 mousePos;
-    private float rotateX;
-    private float rotateY;
+    public Camera cam;
+    private Vector3 camDir;
+    private Vector3 camSid;
 
     // Use this for initialization
     void Start () {
@@ -21,16 +19,15 @@ public class Move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        camDir = new Vector3(cam.transform.forward.x, 0, cam.transform.forward.z).normalized;
+        camSid = new Vector3(cam.transform.right.x, 0, cam.transform.right.z).normalized;
         if (Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
         {
-            transform.Translate(speed * Input.GetAxis("Horizontal") * Time.deltaTime, 0, 0);
+            transform.position = transform.position + Input.GetAxis("Horizontal") * camSid * Time.deltaTime * speed;
         }
         if (Mathf.Abs(Input.GetAxis("Vertical")) > 0)
         {
-            transform.Translate(0, 0, speed * Input.GetAxis("Vertical") * Time.deltaTime);
+            transform.position = transform.position + Input.GetAxis("Vertical") * camDir * Time.deltaTime * speed;
         }
-        rotateX += rotateSpeedX * Input.GetAxis("Mouse X");
-        rotateY -= rotateSpeedY * Input.GetAxis("Mouse Y");
-        transform.eulerAngles = new Vector3(rotateY, rotateX, 0);
     }
 }

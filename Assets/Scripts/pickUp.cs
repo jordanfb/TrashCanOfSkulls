@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class pickUp : MonoBehaviour {
 
     public Text txt;
-    public Text noteCount;
-    public Image img;
+    public Text img;
 
     // Use this for initialization
     void Start () {
@@ -34,8 +33,11 @@ public class pickUp : MonoBehaviour {
             txt.text = "Press E to pick up";
             if (Input.GetKeyDown(KeyCode.E))
             {
-                img.sprite = other.GetComponent<SpriteRenderer>().sprite;
                 img.enabled = true;
+                img.text = other.GetComponent<TextHolder>().data.ToString();
+                Debug.Log(img.text);
+                Debug.Log(other.GetComponent<TextHolder>().data.name);
+                Debug.Log(other.GetComponent<TextHolder>().data2);
                 //Also can increment count here
                 Destroy(other.gameObject);
                 txt.text = "Press LMB to close";
